@@ -1,0 +1,11 @@
+<div>
+  @for(item of items(); track item.id) {
+    <p>{{ item.name }} {{ item.id }} <button (click)="removeItem(item.id)">Remove</button></p>
+  } @empty {
+    <h4>Start adding to you cart <button (click)="addItem()">here</button></h4>
+  }
+
+  @if(items().length) {
+    <button (click)="addItem()">Add item</button>
+  }
+</div>
